@@ -16,7 +16,7 @@ server.get('/', (req, res) => {
 });
 
 // Handle form submission
-server.post('/LAB', (req, res) => {
+server.post('/', (req, res) => {
   const { noun, verb, adjective, adverb, place } = req.body;
   const madLib = `Once upon a time, a ${adjective} ${noun} wanted to ${verb} ${adverb} in ${place}. The end.`;
   res.send(madLib);
@@ -28,4 +28,7 @@ if (process.argv[2] === 'local') {
   port = 8080;
 }
 
-server.listen(port, () => console.log('Ready on localhost!'));
+// Allow the server to accept connections from any IP address
+server.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on port ${port}`);
+});
