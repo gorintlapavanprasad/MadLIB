@@ -6,8 +6,8 @@ const server = express();
 server.use(express.urlencoded({ extended: true }));
 server.use(logger('dev'));
 
-// Serve static files from the "LAB" folder
-const publicServedFilesPath = path.join(__dirname, 'LAB');
+// Serve static files from the project root
+const publicServedFilesPath = path.join(__dirname);
 server.use(express.static(publicServedFilesPath));
 
 // Serve the HTML file
