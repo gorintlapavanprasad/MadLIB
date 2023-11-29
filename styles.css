@@ -1,58 +1,73 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  margin: 20px;
+  color: #fff;
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-h1 {
-    color: #4CAF50;
-    font-size: 2em;
-    margin-bottom: 20px;
+.input-container,
+.story-container {
+  width: 45%; /* Adjust the width as needed */
 }
 
-form {
-    display: grid;
-    gap: 15px;
+.input-container {
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
 }
 
-label {
-    color: #333;
-    font-size: 1.2em;
+.story-container {
+  background-color: #000; /* Set the background color to black */
+  color: #fff; /* Set the text color to white */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left; /* Align text to the left within the story container */
+}
+
+h1, h2 {
+  color: #3498db;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #2980b9;
+}
+
+#textarea {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button {
+  transition: background-color 0.3s;
 }
